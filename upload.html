@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>更新 excel 文件到服务器</title>
+  <link rel="stylesheet" href="css/purecss-3.0.0-min.css">
+  <link rel="stylesheet" href="css/upload.css">
+</head>
+<body>
+
+  <!-- 密码模态框 -->
+  <div class="modal" id="passwordModal">
+    <div class="modal-content">
+      <h2>请输入密码</h2>
+      <input type="password" id="passwordInput" placeholder="密码">
+      <button id="passwordSubmit">提交</button>
+      <p id="passwordMessage" style="color: red;"></p>
+    </div>
+  </div>
+
+  <div id="app" style="display:none;">  <!-- 初始隐藏 app 内容 -->
+    <div class="pure-g">
+      <div class="pure-u-1">
+        <h1>更新 excel 文件</h1>
+      </div>
+    </div>
+    <div class="pure-g">
+      <div class="pure-u-1">
+        <div class="pure-g">
+          <div class="pure-u-1">
+            <div id="message"><p>选择文件，然后点击上传按钮。</p></div>
+          </div>
+        </div>
+        <form class="pure-form">
+          <button type="button" class="pure-button pure-button-primary" id="uploadButton">上传</button>
+          <table class="file-table">
+            <thead>
+              <tr>
+                <th>文件名</th>
+                <th>选择文件</th>
+                <th>更新结果</th> <!-- 新增列 -->
+              </tr>
+            </thead>
+            <tbody id="fileTableBody">  <!-- 添加 id 方便操作 -->
+              <tr>
+                <td>汽车类样品.xlsx</td>
+                <td><input type="file" id="fileInput1"></td>
+                <td id="status1"></td> <!-- 用于显示状态 -->
+              </tr>
+              <tr>
+                <td>汽车类图纸目录表.xlsx</td>
+                <td><input type="file" id="fileInput2"></td>
+                <td id="status2"></td> <!-- 用于显示状态 -->
+              </tr>
+              <tr>
+                <td>消费类样品.xlsx</td>
+                <td><input type="file" id="fileInput3"></td>
+                <td id="status3"></td> <!-- 用于显示状态 -->
+              </tr>
+              <tr>
+                <td>IQC工程图纸登记表.xlsx</td>
+                <td><input type="file" id="fileInput4"></td>
+                <td id="status4"></td> <!-- 用于显示状态 -->
+              </tr>
+              <tr>
+                <td>环保测试记录表.xlsx</td>
+                <td><input type="file" id="fileInput5"></td>
+                <td id="status5"></td> <!-- 用于显示状态 -->
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <script src="js/crypto-js-4.1.1.min.js"></script>
+  <script type="module" src="js/upload.js"></script>
+</body>
+</html>

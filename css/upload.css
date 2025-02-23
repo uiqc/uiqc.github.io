@@ -1,0 +1,119 @@
+/* upload.css */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+#app {
+  width: 90vw; /* 使用视口宽度的 90% */
+  max-width: 800px; /* 增加宽度以适应表格 */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #0078d4;
+  margin-bottom: 20px; /* 增加标题下方的间距 */
+}
+
+p {
+  text-align: center;
+  margin-bottom: 30px; /* 增加段落下方的间距 */
+}
+
+#message {
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+/* 文件表格样式 */
+.file-table {
+  width: 100%;
+  border-collapse: collapse; /* 合并边框 */
+}
+
+.file-table th,
+.file-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* 添加下边框 */
+}
+
+.file-table th {
+  font-weight: bold;
+  background-color: #f9f9f9; /* 表头背景色 */
+}
+
+/* 按钮样式 */
+.pure-button-primary {
+  background-color: #0078d4;
+  color: #fff;
+  border-radius: 5px; /* 增加按钮圆角 */
+  padding: 10px 20px; /* 增加按钮内边距 */
+  font-size: 16px; /* 增加按钮字体大小 */
+  margin-bottom: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 800px) { /* 调整响应式断点 */
+  #app {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .file-table {
+    font-size: 14px; /* 缩小字体 */
+  }
+}
+
+/* 模态框样式 */
+.modal {
+  display: none; /* 默认隐藏 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  z-index: 1000; /* 确保在最上层 */
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal-content input[type="password"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.modal-content button {
+  background-color: #0078d4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #005a9e;
+}

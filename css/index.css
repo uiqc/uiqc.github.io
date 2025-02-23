@@ -1,0 +1,85 @@
+/* index.css */
+
+/* 使用严格模式下的 CSS */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+/* 高清屏幕适配 */
+@media screen and (min-resolution: 2dppx) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.table-responsive {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.status {
+  margin: 0px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.status.error {
+  background-color: #fff3f3;
+  color: #ff0000;
+  border: 1px solid #ffcdd2;
+}
+
+.status.success {
+  background-color: #f1f8e9;
+  color: #33691e;
+  border: 1px solid #dcedc8;
+}
+
+.status.loading {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  border: 1px solid #bbdefb;
+}
+
+/* 表格样式优化 */
+.pure-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.pure-table th,
+.pure-table td {
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* 表单样式 */
+.pure-form {
+  margin-bottom: 20px;
+}
+
+.pure-form input[type='text'] {
+  width: 100%;
+  max-width: 300px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .pure-form input[type='text'] {
+    margin-bottom: 10px;
+  }
+
+  .pure-button {
+    width: 100%;
+  }
+}

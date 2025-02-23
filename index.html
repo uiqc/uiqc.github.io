@@ -1,0 +1,73 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 在你的 HTML 文件的 <head> 标签中，确保 manifest.json 文件被正确引用 -->
+    <link rel="manifest" href="manifest.json" />
+    <script src="app.js"></script>
+    <script src="js/xlsx-0.20.3.full.min.js"></script>
+    <link rel="stylesheet" href="css/purecss-3.0.0-min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>物料查询</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="pure-form" id="searchForm">
+        <fieldset>
+          <input type="text" id="searchInput" placeholder="请输入物料编号" required />
+          <button type="submit" class="pure-button pure-button-primary">查询</button>
+        </fieldset>
+      </form>
+
+      <div id="status" class="status"></div>
+
+      <div class="table-responsive">
+        <table class="pure-table pure-table-bordered">
+          <thead>
+            <th id="resultCountForAuto">车载类</th>
+            <tr>
+              <th>物料编码</th>
+              <th>送检</th>
+              <th>样品</th>
+              <th>图纸</th>
+              <th>名称</th>
+              <th>供应商</th>
+              <th>上次送检</th>
+              <th>有效</th>
+            </tr>
+          </thead>
+
+          <tbody id="resultTableForAuto"></tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive">
+        <table class="pure-table pure-table-bordered">
+          <thead>
+            <th id="resultCount">消费类</th>
+            <tr>
+              <th>物料编码</th>
+              <th>送检</th>
+              <th>样品</th>
+              <th>图纸</th>
+              <th>名称</th>
+              <th>供应商</th>
+              <th>上次送检</th>
+              <th>有效</th>
+            </tr>
+          </thead>
+
+          <tbody id="resultTable"></tbody>
+        </table>
+      </div>
+      <button id="retainDataBtn" class="pure-button pure-button-primary" style="width: 100%; margin-top: 20px;">获取最新数据</button>
+    </div>
+
+    
+    <script type="module" src="js/excel_search.js"></script>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
